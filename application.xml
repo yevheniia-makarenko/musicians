@@ -7,9 +7,11 @@
        <bean id="artistService" class="service.ArtistService" autowire="byName">
 
        </bean>
+       <bean id="bandService" class="service.BandService" autowire="byName"/>
 
        <bean id="mysql" class="dao.impl.MysqlArtistDaoImpl"></bean>
        <bean id="mongo" class="dao.impl.MongodbArtistDaoImpl"></bean>
+       <bean id="bandDao" class="dao.impl.BandDaoImpl"></bean>
        
        <context:component-scan base-package="config"></context:component-scan>
 
