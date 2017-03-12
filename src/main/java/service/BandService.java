@@ -23,35 +23,13 @@ public class BandService {
         return bandDao.findAll();
     }
 
-    public List<Band> findAll(List<Band> bands) {
-        return bandDao.findAll(bands);
-    }
-
     public void save(Band band) {
         bandDao.save(band);
     }
 
-    public void save(List<Band> bands) {
-        bandDao.save(bands);
-    }
-
-    public Boolean exists(Integer id) {
-        return bandDao.exists(id);
-    }
 
     public void delete(Integer id) {
         bandDao.delete(id);
     }
 
-    public void delete(Band band) {
-        bandDao.delete(band);
-    }
-
-    public void delete(List<Band> bands) {
-        bandDao.delete(bands);
-    }
-
-    public Long count() {
-        return bandDao.count();
-    }
 }
