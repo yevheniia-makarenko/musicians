@@ -9,11 +9,11 @@ import java.util.List;
 public class Event {
     private String name;
 
-    private String address;
+    private Venue venue;
 
     private Date date;
 
-    private List<Artist> participants;
+    private List<Band> participants;
 
     public String getName() {
         return name;
@@ -23,13 +23,9 @@ public class Event {
         this.name = name;
     }
 
-    public String getAddress() {
-        return address;
-    }
+    public Venue getVenue() { return venue; }
 
-    public void setAddress(String address) {
-        this.address = address;
-    }
+    public void setVenue(Venue venue) { this.venue = venue; }
 
     public Date getDate() {
         return date;
@@ -39,11 +35,11 @@ public class Event {
         this.date = date;
     }
 
-    public List<Artist> getParticipants() {
+    public List<Band> getParticipants() {
         return participants;
     }
 
-    public void setParticipants(List<Artist> participants) {
+    public void setParticipants(List<Band> participants) {
         this.participants = participants;
     }
 
@@ -51,7 +47,7 @@ public class Event {
     public String toString() {
         return "Event{" +
                 "name='" + name + '\'' +
-                ", address='" + address + '\'' +
+                ", venue=" + venue +
                 ", date=" + date +
                 ", participants=" + participants +
                 '}';
