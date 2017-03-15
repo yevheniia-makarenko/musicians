@@ -7,6 +7,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 import service.ArtistService;
 import service.BandService;
+import service.EventService;
 
 /**
  * Created by eugen on 3/3/17.
@@ -18,6 +19,8 @@ public class MusicMain {
         ArtistService service = context.getBean(ArtistService.class);
         BandService bandService = context.getBean(BandService.class);
         bandService.findById(1);
+        EventService eventService = context.getBean(EventService.class);
+        eventService.findById(1);
         service.printArtist();
     }
 

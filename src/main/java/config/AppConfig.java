@@ -1,7 +1,9 @@
 package config;
 
 import dao.BandDao;
+import dao.EventDao;
 import dao.impl.BandDaoImpl;
+import dao.impl.EventDaoImpl;
 import dao.impl.MongodbArtistDaoImpl;
 import dao.impl.MysqlArtistDaoImpl;
 import entity.Artist;
@@ -10,6 +12,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import service.ArtistService;
 import service.BandService;
+import service.EventService;
 
 /**
  * Created by eugen on 3/10/17.
@@ -49,5 +52,11 @@ public class AppConfig {
     public BandService bandService() {
         return new BandService();
     }
+
+    @Bean
+    public EventDao eventDao() { return new EventDaoImpl(); }
+
+    @Bean
+    EventService eventService() { return new EventService(); }
 
 }
