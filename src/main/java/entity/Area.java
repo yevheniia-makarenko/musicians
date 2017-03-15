@@ -11,7 +11,7 @@ public class Area {
 
     private String address;
 
-    private Integer numOfPlaces;
+    private Integer numberOfPlaces;
 
 
     public String getName() {
@@ -29,10 +29,10 @@ public class Area {
     }
 
     public int getNumOfPlaces() {
-        return numOfPlaces;
+        return numberOfPlaces;
     }
     public void setNumOfPlaces(Integer numOfPlaces) {
-        this.numOfPlaces = numOfPlaces;
+        this.numberOfPlaces = numOfPlaces;
     }
 
     @Override
@@ -40,7 +40,7 @@ public class Area {
         return "Area{" +
                 "name='" + name + '\'' +
                 ", address=" + address +
-                ", number of places=" + numOfPlaces +
+                ", number of places=" + numberOfPlaces +
                 '}';
     }
 }

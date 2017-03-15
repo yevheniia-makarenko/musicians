@@ -2,10 +2,8 @@ package config;
 
 import dao.AreaDao;
 import dao.BandDao;
-import dao.impl.BandDaoImpl;
-import dao.impl.AreaDaoImpl;
-import dao.impl.MongodbArtistDaoImpl;
-import dao.impl.MysqlArtistDaoImpl;
+import dao.EventDao;
+import dao.impl.*;
 import entity.Artist;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -13,6 +11,7 @@ import org.springframework.context.annotation.Configuration;
 import service.AreaService;
 import service.ArtistService;
 import service.BandService;
+import service.EventService;
 
 /**
  * Created by eugen on 3/10/17.
@@ -44,6 +43,16 @@ public class AppConfig {
     }
 
     @Bean
+    public AreaDao areaDao() {
+        return new AreaDaoImpl();
+    }
+
+    @Bean
+    public EventDao eventDao() {
+        return new EventDaoImpl();
+    }
+
+    @Bean
     public ArtistService artistService() {
         return new ArtistService();
     }
@@ -54,9 +63,12 @@ public class AppConfig {
     }
 
     @Bean
-    public AreaDao areaDao() { return new AreaDaoImpl(); }
+    public AreaService areaService() {
+        return new AreaService();
+    }
 
     @Bean
-    public AreaService areaService() { return new AreaService(); }
-
+    public EventService eventService() {
+        return new EventService();
+    }
 }
