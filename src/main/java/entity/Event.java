@@ -9,7 +9,7 @@ import java.util.List;
 public class Event {
     private String name;
 
-    private Venue venue;
+    private Area area;
 
     private Date date;
 
@@ -23,9 +23,10 @@ public class Event {
         this.name = name;
     }
 
-    public Venue getVenue() { return venue; }
 
-    public void setVenue(Venue venue) { this.venue = venue; }
+    public Area getArea() { return area; }
+
+    public void setArea(Area area) { this.area = area; }
 
     public Date getDate() {
         return date;
@@ -47,7 +48,7 @@ public class Event {
     public String toString() {
         return "Event{" +
                 "name='" + name + '\'' +
-                ", venue=" + venue +
+                ", address=" + area +
                 ", date=" + date +
                 ", participants=" + participants +
                 '}';
