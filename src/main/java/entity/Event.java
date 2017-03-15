@@ -23,9 +23,9 @@ public class Event {
         this.name = name;
     }
 
-    public Area getVenue() { return area; }
+    public Area getArea() { return area; }
 
-    public void setVenue(Area area) { this.area = area; }
+    public void setArea(Area area) { this.area = area; }
 
     public Date getDate() {
         return date;
@@ -47,7 +47,7 @@ public class Event {
     public String toString() {
         return "Event{" +
                 "name='" + name + '\'' +
-                ", venue=" + area +
+                ", address=" + area +
                 ", date=" + date +
                 ", participants=" + participants +
                 '}';
