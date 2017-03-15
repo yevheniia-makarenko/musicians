@@ -1,13 +1,14 @@
 package service;
 
 import dao.EventDao;
+import entity.Band;
 import entity.Event;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
 /**
- * Created by admin on 15.03.2017.
+ * Created by kowalskiy on 15.03.17.
  */
 public class EventService {
 
@@ -19,15 +20,9 @@ public class EventService {
         return eventDao.findById(id);
     }
 
-    public List<Event> findAll() {
-        return eventDao.findAll();
-    }
+    public List<Event> findAll() { return eventDao.findAll(); }
 
-    public void save(Event event) {
-        eventDao.save(event);
-    }
+    public void save (Event event) { eventDao.save(event); }
 
-    public void delete(int id) {
-        eventDao.delete(id);
-    }
+    public void delete(int id) { eventDao.delete(id); }
 }

@@ -3,6 +3,7 @@ package config;
 import dao.AreaDao;
 import dao.BandDao;
 import dao.EventDao;
+
 import dao.impl.*;
 import entity.Artist;
 import org.springframework.context.annotation.Bean;
@@ -68,7 +69,10 @@ public class AppConfig {
     }
 
     @Bean
-    public EventService eventService() {
-        return new EventService();
-    }
+    public EventDao eventDao() { return new EventDaoImpl(); }
+
+    @Bean
+    EventService eventService() { return new EventService(); }
+
+
 }
