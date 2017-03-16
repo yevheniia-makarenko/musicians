@@ -69,9 +69,6 @@ public class AppConfig {
     }
 
     @Bean
-    public EventDao eventDao() { return new EventDaoImpl(); }
-
-    @Bean
     EventService eventService() { return new EventService(); }
 
 
