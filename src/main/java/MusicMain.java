@@ -1,5 +1,6 @@
 import config.AppConfig;
 import dao.ArtistDao;
+import entity.Area;
 import entity.Artist;
 import entity.Instrument;
 import org.springframework.context.ApplicationContext;
@@ -17,16 +18,19 @@ public class MusicMain {
 
     public static void main(String[] args) {
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
-        ArtistService service = context.getBean(ArtistService.class);
-        BandService bandService = context.getBean(BandService.class);
         AreaService areaService = context.getBean(AreaService.class);
-        EventService eventService = context.getBean(EventService.class);
+        System.out.println(areaService.findAll());
+        /*areaService.save(generateArea());
+        System.out.println(areaService.findAll());*/
+        System.out.println(areaService.getAreaByName("Jazz*"));
+    }
 
-
-        bandService.findById(1);
-        areaService.findAll();
-        eventService.findById(1);
-        service.printArtist();
+    private static Area generateArea() {
+        Area area = new Area();
+        area.setName("Jazzter");
+        area.setAddress("Poetry square");
+        area.setNumOfPlaces(100);
+        return area;
     }
 
 }
