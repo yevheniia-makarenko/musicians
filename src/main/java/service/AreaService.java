@@ -20,9 +20,6 @@ public class AreaService {
     @Autowired
     AreaRepository areaRepository;
 
-    @Autowired
-    AreaDao areaDao;
-
     public Area findById(Integer id) {
         return areaRepository.findOne(id);
     }
